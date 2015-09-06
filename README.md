@@ -41,6 +41,11 @@ Find "http_port 3128" in /etc/squid3/squid3.conf, and add it.
 	sslproxy_cert_error allow all
 	sslproxy_flags DONT_VERIFY_PEER
 
+Find "http_access", and change it looks like below.	
+
+	# And finally deny all other access to this proxy
+	http_access allow all
+
 ###Iptables setting (for router, also for PC, watch out "ethX")
 
 	iptables -F
