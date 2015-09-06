@@ -1,7 +1,7 @@
 squid3.4.8-deb
 =====
 
-I built those packages fellow [squid-3-4-x-with-ssl-for-debian-wheezy](http://codepoets.co.uk/2014/squid-3-4-x-with-ssl-for-debian-wheezy/) and [how-to-filter-https-traffic-with-squid-3-on-ubuntu-server-13-10](http://ubuntuserverguide.com/2013/12/how-to-filter-https-traffic-with-squid-3-on-ubuntu-server-13-10.html), if you have any questions or why, please find reason from those two articles by yourself, I only introduce how to install and make them works on Debian 8 64bit.
+I built those packages fellow [squid-3-4-x-with-ssl-for-debian-wheezy](http://codepoets.co.uk/2014/squid-3-4-x-with-ssl-for-debian-wheezy/) and [how-to-filter-https-traffic-with-squid-3-on-ubuntu-server-13-10](http://ubuntuserverguide.com/2013/12/how-to-filter-https-traffic-with-squid-3-on-ubuntu-server-13-10.html), if you have any questions or why, please find reason from those two articles by yourself, I only introduce how to install and make them works on **Debian 8 64bit**.
 
 **if you understand what is each command for, do it as you think, or don't think too much just copy & paste & execute.**
 
@@ -12,7 +12,8 @@ I built those packages fellow [squid-3-4-x-with-ssl-for-debian-wheezy](http://co
 ###Install DEB
 
 	sudo apt-get --purge remove squid3*
-	sudo apt-get install squid-langpack
+	sudo apt-get -y install squid-langpack
+	sudo apt-get -y build-dep squid3
 	sudo dpkg -i squid3*.deb
 
 ###Make CA
